@@ -5,7 +5,9 @@ class Solution:
         add = 1
         turn = 1
         result = [[rStart, cStart]]
-        while (count < total):            
+        
+        while (count < total):  
+
             if turn % 4 == 1:
                 for j in range(cStart+1, cStart+add+1):
                     if 0 <= rStart < rows and 0 <= j < cols:
