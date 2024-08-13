@@ -16,7 +16,6 @@ class Solution:
                 makeComb(index + 1, pattern + letter)
 
         makeComb(0, "")
-        print(res)
         return res
 
             
