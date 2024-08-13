@@ -5,7 +5,6 @@ class Solution:
 
         def makeComb(startInd, path):
             if len(path) == n and path not in res:
-                print(path)
                 res.append(list(path))
                 return
             for j in range(0, n):
