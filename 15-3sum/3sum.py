@@ -2,7 +2,6 @@ class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         n = len(nums)
         res = []
-        
         nums.sort()
 
         def twoSum(i, res):
@@ -17,15 +16,11 @@ class Solution:
                 seen.add(nums[j])
                 j += 1
 
-
-
-
         for i in range(0, n):
             if nums[i] > 0:
                 break
             if i == 0 or nums[i] != nums[i-1]:
                 twoSum(i, res)
-        print(res)
         return res
 
 
