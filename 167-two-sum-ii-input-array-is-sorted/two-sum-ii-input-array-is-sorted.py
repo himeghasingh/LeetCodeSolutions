@@ -1,6 +1,5 @@
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
-        seen = set()
         n = len(numbers)
         for i in range(0, n):
             first = i
