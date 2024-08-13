@@ -14,6 +14,5 @@ class Solution:
                     return
                 makeSum(target-candidates[i], path+[candidates[i]]) 
 
-        for i in range(0, n):
-            makeSum(target, [])
+        makeSum(target, [])
         return results
