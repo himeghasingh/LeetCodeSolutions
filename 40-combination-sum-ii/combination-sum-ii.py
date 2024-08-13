@@ -7,11 +7,11 @@ class Solution:
         def makeSum(target, startInd, path):
             if target == 0:
                 if path not in results:
-                    results.append(copy.deepcopy(path))
+                    results.append(path)
                     return
             for i in range(startInd, n):
                 if i > startInd and candidates[i] == candidates[i - 1]:
-                    continue  # Skip duplicates
+                    continue 
                 if candidates[i] > target:
                     return
                 makeSum(target-candidates[i], i+1, path+[candidates[i]]) 
