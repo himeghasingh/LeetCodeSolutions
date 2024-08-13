@@ -4,15 +4,15 @@ class Solution:
         n = len(candidates)
         results = []
 
-        def makeSum(target, path):
+        def makeSum(target, startInd, path):
             if target == 0:
                 if sorted(path) not in results:
                     results.append(sorted(path))
                     return
-            for i in range(0, n):
+            for i in range(startInd, n):
                 if candidates[i] > target:
                     return
-                makeSum(target-candidates[i], path+[candidates[i]]) 
+                makeSum(target-candidates[i], i, path+[candidates[i]]) 
 
-        makeSum(target, [])
+        makeSum(target, 0, [])
         return results
