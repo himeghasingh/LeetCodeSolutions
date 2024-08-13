@@ -4,7 +4,7 @@ class Solution:
         n = len(candidates)
         results = []
 
-        def makeSum(target, startInd, path):
+        def makeSum(target, path):
             if target == 0:
                 if sorted(path) not in results:
                     results.append(sorted(path))
@@ -12,8 +12,8 @@ class Solution:
             for i in range(0, n):
                 if candidates[i] > target:
                     return
-                makeSum(target-candidates[i], i+1, path+[candidates[i]]) 
+                makeSum(target-candidates[i], path+[candidates[i]]) 
 
         for i in range(0, n):
-            makeSum(target, i, [])
+            makeSum(target, [])
         return results
