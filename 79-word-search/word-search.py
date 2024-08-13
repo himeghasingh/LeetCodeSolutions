@@ -18,8 +18,6 @@ class Solution:
                 nonlocal flag
                 flag = True
                 return 
-            # if len(currWord) >= len(word):
-            #     return
             for idir, jdir in directions:
                 new_i = iindex + idir
                 new_j = jindex + jdir
@@ -28,7 +26,8 @@ class Solution:
                     findWord(new_i, new_j, currWord + board[new_i][new_j], visited)
                     visited.remove((new_i, new_j))
         
-        
+        # findWord(0, 0, "", set())
+        # return flag
         if startIndex:
             for i_ind, j_ind in startIndex:
                 visited = set()
