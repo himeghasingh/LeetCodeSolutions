@@ -1,5 +1,6 @@
 class Solution:
     def smallestDistancePair(self, nums: List[int], k: int) -> int:
+
         nums.sort()
 
         def findPairs(target):
@@ -22,6 +23,25 @@ class Solution:
                 l = mid + 1
         return r  
 
+        # n = len(nums)
+        # maxNum = max(nums)
+        # distanceBucket = [0] * (maxNum + 1)
+
+        # for i in range(0, n):
+        #     for j in range(i + 1, n):
+        #         distance = abs(nums[i] - nums[j])
+        #         distanceBucket[distance] += 1
+
+        # for dist in range(0, maxNum + 1):
+        #     k -= distanceBucket[dist]
+        #     if k <= 0:
+        #         return dist
+
+        # return -1  
+       
+       
+       
+       
         
         
         
