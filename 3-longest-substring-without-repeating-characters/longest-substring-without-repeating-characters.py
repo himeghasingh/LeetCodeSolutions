@@ -1,5 +1,6 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
+        
         n = len(s)
         if n == 1:
             return 1
@@ -8,8 +9,8 @@ class Solution:
         l = 0
         r = 0
         substr = ""
-
         ch = ''
+
         while(l <= r  and r < n):
             ch = s[r]
             if ch in substr:
@@ -20,13 +21,11 @@ class Solution:
                 l += dupIndex+1
                 r = l
                 substr = s[l:r+1]
-                
             else:
                 substr += ch
-            # print("substr = ", substr)
             r += 1
+
         maxLen = max(maxLen, len(substr))
-        # print("\n",maxLen)
         return maxLen
             
 
