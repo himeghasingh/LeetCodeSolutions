@@ -16,8 +16,6 @@ class Solution:
             if ch in substr:
                 maxLen = max(maxLen, len(substr))
                 dupIndex = substr.index(ch)
-                # if dupIndex < 0:
-                #     dupIndex = 0
                 l += dupIndex+1
                 r = l
                 substr = s[l:r+1]
