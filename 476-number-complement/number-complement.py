@@ -1,7 +1,9 @@
 class Solution:
     def findComplement(self, num: int) -> int:
+
         if num == 0:
             return 0
+
         def toBin(num):
             s = ""
             while (num > 0):
@@ -9,6 +11,7 @@ class Solution:
                 s = str(rem) + s
                 num = num // 2
             return s
+
         def toDec(comp):
             n = len(comp)
             res = 0
@@ -20,17 +23,14 @@ class Solution:
             return int(res)
         
         binNum = toBin(num)
-        print("binary number ", binNum)
         binComp = ""
         for ch in binNum:
             if ch == '0':
                 binComp += '1'
             else:
                 binComp += '0'
-        print("binary complement ", binComp)
-
         decComp = toDec(binComp)
-        print(decComp)
+        
         return decComp
 
 
