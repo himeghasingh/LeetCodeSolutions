@@ -40,8 +40,8 @@ class Solution:
             return a
         if bignum == 0:
             return '0/1'
-        elif abs(bignum) == 1 or abs(bigden) == 1:
-            return str(bignum)+"/"+str(bigden)
+        # elif abs(bignum) == 1 or abs(bigden) == 1:
+        #     return str(bignum)+"/"+str(bigden)
         else:
             f = hcf(bignum, bigden)
             bignum = bignum // f
