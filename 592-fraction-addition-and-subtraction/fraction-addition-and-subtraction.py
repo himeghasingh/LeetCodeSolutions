@@ -40,12 +40,16 @@ class Solution:
             num = numerator[i]
             mul = bigden // den
             bignum += (num*mul)
+        f = hcf(bignum, bigden)
+        bignum = bignum // f
+        bigden = bigden // f
+        return str(bignum)+"/"+str(bigden)
 
-        if bignum == 0:
-            return '0/1'
-        else:
-            f = hcf(bignum, bigden)
-            bignum = bignum // f
-            bigden = bigden // f
-            return str(bignum)+"/"+str(bigden)
+        # if bignum == 0:
+        #     return '0/1'
+        # else:
+        #     f = hcf(bignum, bigden)
+        #     bignum = bignum // f
+        #     bigden = bigden // f
+        #     return str(bignum)+"/"+str(bigden)
         
