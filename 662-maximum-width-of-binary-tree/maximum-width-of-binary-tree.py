@@ -12,7 +12,7 @@ class Solution:
         maxwidth = 0
 
         queue = deque()
-        queue.append([root,0])
+        queue.append([root,1])
         
         while queue:
             levelLen = len(queue)
@@ -27,6 +27,7 @@ class Solution:
             
             currWidth = index - levelHeadIndex + 1
             maxwidth = max(maxwidth, currWidth)
+
         
         return maxwidth
 
