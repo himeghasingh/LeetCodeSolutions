@@ -77,7 +77,7 @@ class Solution:
 
                 if remdisc > 0:
                     newcost_with_discount = currcost + toll // 2
-                    if (neighbor, remdisc - 1) not in visited or visited[(neighbor, remdisc - 1)] > newcost_with_discount:
+                    if (neighbor, remdisc - 1) not in visited :
                         heapq.heappush(minHeap, (newcost_with_discount, neighbor, remdisc - 1))
 
         return -1 
