@@ -12,15 +12,10 @@ class Solution:
         prev.next = head
         dummy = prev
         
-        flag = 0
-
         while head:
             if head.val in numsSet:
                 prev.next = head.next
-                flag = 1
             else:
-                flag = 0
-            if flag == 0:
                 prev = head
             head = head.next
         return dummy.next
