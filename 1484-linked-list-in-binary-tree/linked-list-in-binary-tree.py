@@ -32,9 +32,7 @@ class Solution:
                     nodePos.append(pos.right)
             if nodePos == []:
                 return False
-            # print("/n")
-            # for n in nodePos:
-            #     print(n.val, " ")
+                
             headPos = nodePos
             head = head.next
                 
