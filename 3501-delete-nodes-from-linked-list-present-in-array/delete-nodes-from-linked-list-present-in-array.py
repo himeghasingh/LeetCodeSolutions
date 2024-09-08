@@ -8,9 +8,9 @@ class Solution:
 
         numsSet = set(nums)
        
-        prev = ListNode(None)
-        prev.next = head
-        dummy = prev
+        dummy = ListNode(None)
+        dummy.next = head
+        prev = dummy
         
         while head:
             if head.val in numsSet:
