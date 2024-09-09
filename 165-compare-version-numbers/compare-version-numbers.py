@@ -9,8 +9,6 @@ class Solution:
             v2.extend(['0']*diff)
         elif len2 > len1:
             v1.extend(['0']*diff)
-        print(v1)
-        print(v2)
         n = len(v1)
         for i in range(0, n):
             if int(v1[i]) > int(v2[i]):
