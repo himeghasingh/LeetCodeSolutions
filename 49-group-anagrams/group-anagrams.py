@@ -4,7 +4,7 @@ class Solution:
         for word in strs:
             anaMap[''.join(sorted(word))].append(word)
         result = []
-        for val in anaMap.values():
-            result.append(val)
-        return result
+        # for val in anaMap.values():
+        #     result.append(val)
+        return anaMap.values()
         
