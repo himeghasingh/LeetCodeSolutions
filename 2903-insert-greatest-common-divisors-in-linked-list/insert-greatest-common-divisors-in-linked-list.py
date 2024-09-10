@@ -9,17 +9,14 @@ class Solution:
             return head
         dummy = head
         while head and head.next:
-            # print(dummy)
             a = head.val
             b = head.next.val
             c = math.gcd(a,b)
-            # print(c)
             temp = head.next
             head.next = ListNode(c)
             head.next.next = temp
 
             head = head.next.next
-        # print(dummy)
         return dummy
 
         
