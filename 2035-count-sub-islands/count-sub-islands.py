@@ -14,15 +14,6 @@ class Solution:
         rows = len(grid1)
         cols = len(grid1[0])
         directions = [[1,0], [-1,0], [0,1], [0,-1]]
-        # visited = set()
-        # grid1islands = []
-        # for i in range(0, rows):
-        #     for j in range(0, cols):
-        #         if grid1[i][j] == 1 and (i,j) not in visited: 
-        #             visited.add((i,j))
-        #             island, visited = findIsland(i, j, [[i,j]], grid1)
-        #             grid1islands.append(island)
-
         visited = set()
         grid2islands = []
         for i in range(0, rows):
@@ -33,6 +24,7 @@ class Solution:
                     grid2islands.append(island)
 
         c = 0
+        
         for islands in grid2islands:
             flag = 0
             for i, j in islands:
@@ -42,11 +34,6 @@ class Solution:
             if flag == 0:
                 c += 1
 
-
-        # for row2 in grid2islands:
-        #     for row1 in grid1islands:
-        #         if set(map(tuple, row2)).issubset(set(map(tuple, row1))):
-        #             c += 1
         return c
 
 
