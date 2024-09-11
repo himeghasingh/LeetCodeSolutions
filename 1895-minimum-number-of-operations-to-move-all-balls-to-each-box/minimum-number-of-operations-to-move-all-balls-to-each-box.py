@@ -6,6 +6,5 @@ class Solution:
             for j in range(0, n):
                 if boxes[j] == '1':
                     answer[i] += abs(i-j)
-        print(answer)
         return answer
         
