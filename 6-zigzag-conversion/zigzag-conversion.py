@@ -1,0 +1,47 @@
+class Solution:
+    def convert(self, s: str, numRows: int) -> str:
+        k = numRows - 2
+        n = len(s)
+        matrix = [['']*n for i in range (numRows)]
+        # print(matrix)
+        index = 0
+        turn = 1
+        i = 0
+        j = 0
+        flag = 0
+        while (index < n):
+            if turn % 2 == 1:
+                for i in range(0, numRows):
+                    if index < n:
+                        matrix[i][j] = s[index]
+                        index += 1
+                    else:
+                        flag = 1
+                j += 1
+            
+            elif turn % 2 == 0:
+                for i in range(numRows-2, 0, -1):
+                    if index < n:
+                        matrix[i][j] = s[index]
+                        index += 1
+                        j += 1
+                    else:
+                        flag = 1
+
+            turn += 1
+
+            if flag == 1:
+                break
+        res = ""
+        for i in range(0, numRows):
+            for j in range(0, len(matrix[0])):
+                if matrix[i][j] != '':
+                    res += matrix[i][j]
+        # print(res)
+        return res
+
+                
+                        
+
+
+        
