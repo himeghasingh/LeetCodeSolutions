@@ -1,8 +1,11 @@
 class Solution:
     def convert(self, s: str, numRows: int) -> str:
+        if numRows == 1:
+            return s
         
         n = len(s)
-        matrix = [['']*n for i in range (numRows)]
+        cols = ceil(n / (2 * numRows - 2)) * (numRows - 1)
+        matrix = [['']*cols for i in range (numRows)]
         index = 0
         turn = 1
         i = 0
