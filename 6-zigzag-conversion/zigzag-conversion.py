@@ -29,10 +29,12 @@ class Solution:
 
         
         res = ""
-        for i in range(0, numRows):
-            for j in range(0, len(matrix[0])):
-                if matrix[i][j] != '':
-                    res += matrix[i][j]
+        for row in matrix:
+            res += ''.join(row)
+        # for i in range(0, numRows):
+        #     for j in range(0, len(matrix[0])):
+        #         if matrix[i][j] != '':
+        #             res += matrix[i][j]
 
         return res
 
