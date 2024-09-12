@@ -4,7 +4,6 @@ class Solution:
         for word in words:
             flag = 0
             for ch in word:
-
                 if ch not in allowed:
                     flag = 1
                     break
