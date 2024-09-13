@@ -4,9 +4,9 @@ class Solution:
         ##########DP SOLUTION##########
         dp = [[1] * n for i in range(m)]
 
-        for col in range(1, m):
-            for row in range(1, n):
-                dp[col][row] = dp[col - 1][row] + dp[col][row - 1]
+        for row in range(1, m):
+            for col in range(1, n):
+                dp[row][col] = dp[row- 1][col] + dp[row][col - 1]
 
         return dp[m - 1][n - 1]
 
