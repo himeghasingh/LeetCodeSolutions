@@ -7,7 +7,6 @@ class Solution:
             hr = int(hr)
             mins = int(mins)
             minPoints[i] = (hr*60) + mins
-        print(minPoints)
         minDiff = float("inf")
         minPoints.sort()
 
@@ -15,7 +14,6 @@ class Solution:
             diff = abs(minPoints[i+1]-minPoints[i])
             currDiff = min(diff, 1440-diff)
             minDiff = min(minDiff, currDiff)
-        # print(minDiff)
         minDiff = min(minDiff, minPoints[-1]-minPoints[0], 1440- (minPoints[-1]-minPoints[0]))
         return minDiff
 
